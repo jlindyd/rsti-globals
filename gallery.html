@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gallery | RSTI Globals</title>
+<meta name="description" content="Photos from RSTI Globals workshops, masterclasses, and partnerships.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f1f38'/><path d='M8 22 L16 9 L24 22' stroke='%23c8963e' stroke-width='2.4' fill='none'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+
+<header class="site-nav">
+  <a class="site-nav__mark" href="index.html">RSTI <em>Globals</em></a>
+  <nav class="site-nav__links" id="site-nav-links" aria-label="Primary">
+    <a href="framework.html">Framework</a>
+    <a href="programs.html">Programs</a>
+    <a href="workshop.html">Workshop</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="insights.html">Insights</a>
+    <a href="book.html">The Book</a>
+    <a href="gallery.html" class="is-current" aria-current="page">Gallery</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="site-nav__right">
+    <span class="site-nav__chapter" aria-hidden="true"><span class="folio__num">01</span><span class="folio__title">Gallery</span></span>
+    <a class="site-nav__cta" href="index.html#contact">Collaborate</a>
+    <button class="site-nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="chapter chapter--dark chapter--hero" id="hero" data-chapter="01" data-chapter-title="Gallery">
+    <div class="sc-wrap chapter__inner chapter__inner--hero">
+      <p class="sc-label" style="color:var(--rsti-gold)">In the Field</p>
+      <h1 class="sc-display sc-display--xl page-hero" data-sc-in>Gallery</h1>
+      <p class="sc-lede page-lede" data-sc-in>Workshops, masterclasses, and partnerships — Leading with Robustness&trade; in practice.</p>
+    </div>
+  </section>
+
+  <section class="chapter chapter--light" id="gallery" data-chapter="02" data-chapter-title="Photos">
+    <div class="sc-wrap chapter__inner">
+      <p class="chapter-mark">02 — Photos</p>
+      <div id="gallery-grid" class="gallery-grid" data-sc-in data-sc-stagger="50"></div>
+      <p id="gallery-empty" class="gallery-empty" hidden>
+        No photos yet. Add image files to <code>assets/gallery/</code> and list them in
+        <code>gallery-data.js</code> — see the comment at the top of that file.
+      </p>
+    </div>
+  </section>
+
+  <section class="chapter chapter--dark chapter--close" id="contact" data-chapter="03" data-chapter-title="Collaborate">
+    <div class="sc-wrap chapter__inner chapter__inner--tight">
+      <p class="chapter-mark">03 — Collaborate</p>
+      <h2 class="sc-display sc-display--lg" data-sc-in>Bring Leading with Robustness&trade; to your organization.</h2>
+      <p class="close-line" data-sc-in><a class="link-cta" style="font-size:inherit" href="index.html#contact">Start a conversation <span aria-hidden="true">→</span></a></p>
+      <footer class="colophon" data-sc-in>
+        <p class="sc-label">RSTI Globals · Leading with Robustness&trade; · Robust Value Flow (RVF)</p>
+        <nav class="colophon-nav" aria-label="Site">
+          <a href="index.html">Home</a>
+          <a href="framework.html">Framework</a>
+          <a href="programs.html">Programs</a>
+          <a href="workshop.html">Workshop</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="insights.html">Insights</a>
+          <a href="book.html">The Book</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Collaborate</a>
+        </nav>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous photo">&larr;</button>
+  <figure class="lightbox__figure">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photo">&rarr;</button>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script src="gallery-data.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
