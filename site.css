@@ -621,12 +621,6 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 }
 @media (max-width: 860px) { .net-globe { opacity: 0.55; } }
 
-/* ribbon: a light, subtle wash for a paper chapter, replacing a stock
-   "abstract wave" photo. */
-.ribbon-deco { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; }
-.rb-shape { opacity: 0.5; }
-.rb-shape--a { fill: color-mix(in oklab, var(--rsti-blue) 55%, transparent); }
-.rb-shape--b { fill: color-mix(in oklab, var(--rsti-gold) 45%, transparent); }
 
 /* ------------------------------------------------------------ industries: pan --
    A range of sectors travels sideways, not down (devices.md §3: lateral reads

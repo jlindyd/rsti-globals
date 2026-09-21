@@ -2,3 +2,5 @@ node_modules/
 lab/
 package.json
 package-lock.json
+
+.vercel
