@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="scrollcraft.css">
 <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="home-page">
 
 <span data-sc-progress></span>
 <div class="sc-grain" aria-hidden="true"></div>
@@ -31,7 +31,7 @@
   </nav>
   <div class="site-nav__right">
     <span class="site-nav__chapter" aria-hidden="true"><span class="folio__num">01</span><span class="folio__title">Thesis</span></span>
-    <a class="site-nav__cta" href="#contact">Collaborate</a>
+    <a class="site-nav__cta" href="#contact">Discuss a Workshop</a>
     <button class="site-nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
       <span></span><span></span><span></span>
     </button>
@@ -98,10 +98,10 @@
     <div class="sc-wrap chapter__inner chapter__inner--hero">
       <p class="sc-label hero-eyebrow" data-sc-cue="0">Executive Education · Engineering Leadership</p>
       <h1 class="sc-display sc-display--xl hero-h1" data-sc-cue="0" data-sc-kinetic="lines">Leading with Robustness&trade;</h1>
-      <p class="sc-lede hero-lede" data-sc-cue="0">Enhancing Lean Thinking with Robustness Thinking. Build robustness early, standardize stable processes, and continuously improve — to create, protect, and sustain value across the full product lifecycle.</p>
+      <p class="sc-lede hero-lede" data-sc-cue="0">Help your engineering team prevent failures earlier. Practical workshops connect robust design, Lean thinking, and lifecycle reliability—with a clear 90-day action plan.</p>
       <div class="hero-ctas" data-sc-cue="0">
-        <a class="link-cta" href="#programs">Explore the Masterclass <span aria-hidden="true">→</span></a>
-        <a class="link-cta link-cta--quiet" href="#framework">See the RVF Framework <span aria-hidden="true">→</span></a>
+        <a class="workshop-button" href="#contact">Discuss a Team Workshop <span aria-hidden="true">→</span></a>
+        <a class="link-cta link-cta--quiet" href="#framework">Explore the Framework <span aria-hidden="true">→</span></a>
       </div>
       <ul class="domain-list" data-sc-cue="0">
         <li>Customer Value</li><li>Engineering</li><li>Manufacturing</li><li>Reliability</li><li>Supply Chain</li><li>Learning</li>
@@ -113,6 +113,11 @@
   <section class="chapter chapter--stack chapter--light" id="programs" data-chapter="02" data-chapter-title="Programs">
     <div class="sc-wrap chapter__inner">
       <p class="chapter-mark">02 — Programs</p>
+      <aside class="author-intro" aria-label="The author behind the framework">
+        <div><p class="sc-label">The author behind the framework</p><h2>Meet Matthew Hu</h2></div>
+        <div><p>Author of <cite>Enhancing Life Cycle Reliability with Robust Engineering and Predictive Health Management</cite>, published by Wiley. Explore the book behind RSTI Globals’ approach to robust engineering and lifecycle reliability.</p><a class="link-cta" href="book.html">Explore the book <span aria-hidden="true">→</span></a></div>
+      </aside>
+<div class="field-preview" aria-label="From the RSTI gallery"><div class="field-preview__heading"><div><p class="sc-label">People &amp; perspectives</p><h3>From the field</h3></div><a class="link-cta" href="gallery.html">View the gallery <span aria-hidden="true">→</span></a></div><div class="field-preview__photos"><a href="gallery.html" aria-label="View gallery: Matthew and a professor seated together"><img src="https://img1.wsimg.com/isteam/ip/a2b8383b-8c74-444f-8bd5-11294e3284f1/Haylion17.JPG/:/" alt="Matthew and a professor seated together" width="800" height="600" loading="lazy" decoding="async"></a><a href="gallery.html" aria-label="View gallery: Conference speaker presenting at a lectern"><img src="https://img1.wsimg.com/isteam/ip/a2b8383b-8c74-444f-8bd5-11294e3284f1/IMG_0761.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:984,h:656" alt="Conference speaker presenting at a lectern" width="800" height="600" loading="lazy" decoding="async"></a><a href="gallery.html" aria-label="View gallery: Visitors beside a demonstration shuttle"><img src="https://img1.wsimg.com/isteam/ip/a2b8383b-8c74-444f-8bd5-11294e3284f1/IMG_9618-0001.JPG/:/rs=w:1280,h:960" alt="Visitors beside a demonstration shuttle" width="800" height="600" loading="lazy" decoding="async"></a></div></div>
       <div class="programs-grid" data-sc-in data-sc-stagger="70">
         <article class="program program--lead">
           <p class="sc-label">Featured Program</p>
@@ -147,25 +152,12 @@
     </div>
   </section>
 
-  <!-- 04 · BY THE NUMBERS — quiet, plain, real figures only. The silence before the peak. -->
-  <section class="chapter chapter--stack chapter--light" id="numbers" data-chapter="04" data-chapter-title="By the Numbers">
-    <div class="sc-wrap chapter__inner chapter__inner--tight">
-      <p class="chapter-mark">04 — By the Numbers</p>
-      <div class="stats-row" data-sc-in data-sc-stagger="80">
-        <div class="stat"><p class="sc-display sc-display--lg stat-num"><span data-sc-count="0 5">0</span></p><p class="sc-label stat-label">stages in the Robust Value Flow</p></div>
-        <div class="stat"><p class="sc-display sc-display--lg stat-num"><span data-sc-count="0 12">0</span></p><p class="sc-label stat-label">executive insights published yearly</p></div>
-        <div class="stat"><p class="sc-display sc-display--lg stat-num"><span data-sc-count="0 5">0</span></p><p class="sc-label stat-label">levels, webinar to enterprise transformation</p></div>
-        <div class="stat"><p class="sc-display sc-display--lg stat-num"><span data-sc-count="0 4">0</span></p><p class="sc-label stat-label">quarterly webinars building the conversation</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- 05 · THE FRAMEWORK — the peak. Signature move: the flow draws itself. -->
-  <section class="chapter chapter--dark" id="framework" data-sc-act="pin" data-sc-span="5" data-chapter="05" data-chapter-title="The Framework">
+  <section class="chapter chapter--light" id="framework" data-sc-act="pin" data-sc-span="5" data-chapter="04" data-chapter-title="The Framework">
     <div data-sc-stage class="framework-stage" id="framework-act">
       <div class="sc-wrap framework-grid">
         <div class="framework-intro" data-sc-cue="0 1 0 0">
-          <p class="chapter-mark chapter-mark--onstage">05 — The Framework</p>
+          <p class="chapter-mark chapter-mark--onstage">04 — The Framework</p>
           <h2 class="sc-display sc-display--lg">Robust Value Flow</h2>
           <p class="sc-body framework-quote">"Reliability is created by design, not by testing or maintenance."</p>
           <p class="sc-body framework-note">Twelve stages, one connected system. Scroll to draw it.</p>
@@ -195,9 +187,9 @@
   </section>
 
   <!-- 06 · THE PATHWAY — five levels as a rising staircase, not five equal cards. -->
-  <section class="chapter chapter--light" id="pathway" data-chapter="06" data-chapter-title="The Pathway">
+  <section class="chapter chapter--dark" id="pathway" data-chapter="05" data-chapter-title="The Pathway">
     <div class="sc-wrap chapter__inner">
-      <p class="chapter-mark">06 — The Pathway</p>
+      <p class="chapter-mark">05 — The Pathway</p>
       <h2 class="sc-display sc-display--lg" data-sc-in>A structured path for leadership teams, engineering organizations, and universities.</h2>
       <ol class="pathway-steps" data-sc-in data-sc-stagger="70">
         <li class="pathway-step" style="--lvl:1"><span class="pathway-lvl">Level 1</span><h3>90-Min Webinar</h3><p class="sc-body">Awareness &amp; shared language.</p></li>
@@ -215,60 +207,26 @@
     </div>
   </section>
 
-  <!-- 07 · WHERE IT APPLIES — a range of sectors, so it travels sideways
-       instead of down (devices.md §3: lateral reads as breadth, not hierarchy). -->
-  <section class="chapter chapter--dark chapter--photo" id="industries" data-sc-act="pan" data-sc-span="4.5" data-chapter="07" data-chapter-title="Where It Applies">
-    <div data-sc-stage class="industries-stage">
-      <svg class="net-globe" viewBox="0 0 900 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-sc-in>
-        <g class="ng-globe-wrap" transform="translate(650 260)">
-          <circle r="180" class="ng-globe"/>
-          <ellipse rx="180" ry="60" class="ng-lat"/>
-          <ellipse rx="180" ry="120" class="ng-lat"/>
-          <ellipse rx="60" ry="180" class="ng-lat"/>
-          <ellipse rx="120" ry="180" class="ng-lat"/>
-          <g class="ng-arcs">
-            <path class="ng-arc" d="M0,0 Q -65,-50 -130,-100"/>
-            <path class="ng-arc" d="M0,0 Q 65,-60 130,-120"/>
-            <path class="ng-arc" d="M0,0 Q 85,25 170,50"/>
-            <path class="ng-arc" d="M0,0 Q 25,85 50,170"/>
-            <path class="ng-arc" d="M0,0 Q -75,65 -130,130"/>
-            <path class="ng-arc" d="M0,0 Q -80,5 -160,10"/>
-          </g>
-          <g class="ng-nodes">
-            <circle class="ng-node" cx="-130" cy="-100" r="6"/>
-            <circle class="ng-node" cx="130" cy="-120" r="6"/>
-            <circle class="ng-node" cx="170" cy="50" r="6"/>
-            <circle class="ng-node" cx="50" cy="170" r="6"/>
-            <circle class="ng-node" cx="-130" cy="130" r="6"/>
-            <circle class="ng-node" cx="-160" cy="10" r="6"/>
-          </g>
-        </g>
-      </svg>
-      <div class="chapter-scrim chapter-scrim--band" aria-hidden="true"></div>
-      <div class="industries-head">
-        <p class="chapter-mark">07 — Where It Applies</p>
-        <p class="sc-lede industries-lede">Practical stories, real sectors.</p>
+  <!-- Where it applies: photography and application areas. -->
+  <section class="chapter chapter--light sectors-feature" id="industries" data-chapter="06" data-chapter-title="Where It Applies">
+    <div class="sc-wrap sectors-feature__inner">
+      <p class="chapter-mark">06 — Where It Applies</p>
+      <div class="sectors-feature__intro"><h2>Engineering principles.<br>Real-world possibilities.</h2><p class="sc-lede">From product development to executive learning, robustness connects people, decisions, and performance.</p></div>
+      <div class="sectors-photos">
+        <figure><img src="https://img1.wsimg.com/isteam/ip/a2b8383b-8c74-444f-8bd5-11294e3284f1/IMG_9618-0001.JPG/:/rs=w:1280,h:960" alt="Visitors beside a demonstration shuttle" loading="lazy" width="800" height="600"><figcaption>Technology in the field</figcaption></figure>
+        <figure><img src="https://img1.wsimg.com/isteam/ip/a2b8383b-8c74-444f-8bd5-11294e3284f1/IMG_0761.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:984,h:656" alt="Conference speaker presenting at a lectern" loading="lazy" width="800" height="600"><figcaption>Ideas in conversation</figcaption></figure>
       </div>
-      <div class="industries-rail" data-sc-pan="0.1">
-        <div class="industry-card industry-card--lead">
-          <p class="sc-label">Six sectors</p>
-          <p class="sc-body">One framework, applied where variation is the enemy.</p>
-        </div>
-        <article class="industry-card"><h3>Automotive</h3></article>
-        <article class="industry-card"><h3>Aerospace</h3></article>
-        <article class="industry-card"><h3>Energy</h3></article>
-        <article class="industry-card"><h3>Academia</h3></article>
-        <article class="industry-card"><h3>Professional Societies</h3></article>
-        <article class="industry-card industry-card--last"><h3>Executive Collaboration</h3></article>
-      </div>
+      <p class="sc-label sectors-label">Explore the applications</p>
+      <div class="sectors-grid"><article><h3>Automotive</h3><p>Design for manufacturing variation and real-world use.</p></article><article><h3>Aerospace</h3><p>Connect robust design with lifecycle reliability.</p></article><article><h3>Energy</h3><p>Consider changing operating conditions and equipment health.</p></article><article><h3>Academia</h3><p>Bring engineering principles into applied learning.</p></article><article><h3>Professional Societies</h3><p>Exchange methods, perspectives, and practical knowledge.</p></article><article><h3>Executive Collaboration</h3><p>Connect engineering decisions with organizational priorities.</p></article></div>
+      <a class="link-cta" href="gallery.html">More moments from the field <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <!-- 08 · THE INSIGHTS — one lead insight, then a compact list. Not six equal cards. -->
-  <section class="chapter chapter--light" id="insights" data-chapter="08" data-chapter-title="The Insights">
+  <section class="chapter chapter--dark" id="insights" data-chapter="07" data-chapter-title="The Insights">
     <div class="sc-wrap chapter__inner">
-      <p class="chapter-mark">08 — The Insights</p>
-      <p class="sc-label">One-Year LinkedIn Campaign</p>
+      <p class="chapter-mark">07 — The Insights</p>
+      <p class="sc-label">Ideas for Engineering Leaders</p>
       <div class="insights-lead" data-sc-in>
         <span class="insight-idx">01</span>
         <h2 class="sc-display sc-display--md">Why Robustness Matters</h2>
@@ -281,30 +239,46 @@
         <li><span class="insight-idx">05</span><h3>Robust Value Flow</h3><p class="sc-body">From customer need to sustained value.</p></li>
         <li><span class="insight-idx">06</span><h3>Zero Birth Defects</h3><p class="sc-body">Designing products to tolerate variation.</p></li>
       </ol>
-      <p class="pathway-cta" data-sc-in><a class="link-cta" href="insights.html">See all 12 insights and the editorial calendar <span aria-hidden="true">→</span></a></p>
+      <p class="pathway-cta" data-sc-in><a class="link-cta" href="insights.html">Explore the insights <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <!-- 09 · THE BOOK — a citation, not a fake cover graphic. -->
-  <section class="chapter chapter--stack chapter--dark" id="book" data-chapter="09" data-chapter-title="The Book">
-    <div class="sc-wrap chapter__inner chapter__inner--tight">
-      <p class="chapter-mark">09 — The Book</p>
-      <blockquote class="book-cite" data-sc-in>
-        <p class="sc-display sc-display--md book-title">Enhancing Life Cycle Reliability with Robust Engineering and Predictive Health Management</p>
-        <footer class="sc-label book-pub">Matthew Hu · Wiley</footer>
-      </blockquote>
-      <p class="sc-body book-desc" data-sc-in>Translates lifecycle reliability, robust engineering, and predictive health into practical leadership choices and enterprise capability — the foundation the Workshop and the Roadmap are built on.</p>
-      <p class="pathway-cta" data-sc-in><a class="link-cta" href="https://www.wiley.com/en-us/shop/general-introductory-electrical-electronics-engineering/enhancing-life-cycle-reliability-with-robust-engineering-and-predictive-health-management-p-9781394182381" target="_blank" rel="noopener">View the book on Wiley <span aria-hidden="true">→</span></a></p>
+  <!-- 09 — Standalone book feature. -->
+  <section class="chapter chapter--light book-feature" id="book" data-chapter="08" data-chapter-title="The Book" aria-labelledby="featured-book-title">
+    <div class="sc-wrap book-feature__inner">
+      <p class="chapter-mark">08 — The Book</p>
+      <div class="book-feature__grid">
+        <figure class="book-feature__cover">
+          <img src="https://application.wiley-vch.de/books/tis/cover_big/1394182384.jpg" alt="Cover of Enhancing Life Cycle Reliability with Robust Engineering and Predictive Health Management" loading="lazy" decoding="async">
+          <figcaption>Wiley · Quality and Reliability Engineering</figcaption>
+        </figure>
+        <div class="book-feature__copy">
+          <p class="sc-label">The thinking behind the practice</p>
+          <h2 id="featured-book-title">Enhancing Life Cycle Reliability <span>with Robust Engineering and Predictive Health Management</span></h2>
+          <p class="book-feature__authors">Matthew Hu &amp; Yan-Fu Li <span>Published by Wiley</span></p>
+          <p class="sc-body">Explore how robust design and predictive health management work together to strengthen reliability—from early engineering decisions through a product’s life in the field.</p>
+          <ul class="book-feature__topics">
+            <li>Build reliability into product development.</li>
+            <li>Design for variation in manufacturing and use.</li>
+            <li>Connect field insights with health monitoring and prediction.</li>
+          </ul>
+          <div class="book-feature__actions">
+            <a class="workshop-button" href="https://www.wiley.com/en-us/shop/general-introductory-electrical-electronics-engineering/enhancing-life-cycle-reliability-with-robust-engineering-and-predictive-health-management-p-9781394182381" target="_blank" rel="noopener">View the book on Wiley <span aria-hidden="true">↗</span></a>
+            <a class="link-cta" href="book.html">Explore the book <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 10 · COLLABORATE — the colophon close. Small type, running text, one address. -->
-  <section class="chapter chapter--stack chapter--dark chapter--close" id="contact" data-chapter="10" data-chapter-title="Collaborate">
+  <section class="chapter chapter--stack chapter--dark chapter--close" id="contact" data-chapter="09" data-chapter-title="Collaborate">
     <div class="sc-wrap chapter__inner chapter__inner--tight">
-      <p class="chapter-mark">10 — Collaborate</p>
-      <h2 class="sc-display sc-display--lg" data-sc-in>Build robust products. Lead resilient enterprises.</h2>
-      <p class="sc-body close-lede" data-sc-in>Bring Leading with Robustness&trade; and the Robust Value Flow framework to your leadership team, engineering organization, university, or professional network.</p>
-      <p class="close-line" data-sc-in>Start a conversation — <a href="mailto:mhu@rstiglobals.com?subject=Leading%20with%20Robustness%20Collaboration">mhu@rstiglobals.com</a>, or visit <a href="https://rstiglobals.com/" target="_blank" rel="noopener">rstiglobals.com</a>.</p>
+      <p class="chapter-mark">09 — Collaborate</p>
+      <h2 class="sc-display sc-display--lg" data-sc-in>Bring a robustness workshop to your team.</h2>
+      <p class="sc-body close-lede" data-sc-in>Tell us about your team, the engineering or reliability challenges you want to address, and your preferred timing. We can discuss which program fits your organization.</p>
+      <p class="contact-action"><a class="workshop-button" href="mailto:mhu@rstiglobals.com?subject=Team%20Workshop%20Inquiry&amp;body=Hello%20Matthew%2C%0A%0AOrganization%3A%20%0ATeam%20size%3A%20%0AKey%20challenge%3A%20%0APreferred%20timing%3A%20%0A">Email Matthew about a workshop <span aria-hidden="true">→</span></a><span class="contact-hint">Opens your email app with a few prompts to get started.</span></p>
+      <p class="close-line" data-sc-in>Or email directly — <a href="mailto:mhu@rstiglobals.com?subject=Leading%20with%20Robustness%20Collaboration">mhu@rstiglobals.com</a>, or visit <a href="https://rstiglobals.com/" target="_blank" rel="noopener">rstiglobals.com</a>.</p>
       <footer class="colophon" data-sc-in>
         <p class="sc-label">RSTI Globals · Leading with Robustness&trade; · Robust Value Flow (RVF)</p>
         <p class="sc-label">Create Value. Preserve Value. Sustain Value.</p>

@@ -254,3 +254,18 @@
   }
   requestAnimationFrame(tick);
 })();
+
+/* Match the chapter slide-over transition across the homepage. */
+(function () {
+  if (!document.body.classList.contains('home-page')) return;
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main > .chapter'));
+  function sizeChapters() {
+    sections.forEach(function (section) {
+      section.style.setProperty('--chapter-stick-top', Math.min(0, window.innerHeight - section.offsetHeight) + 'px');
+    });
+  }
+  var chapterObserver = new ResizeObserver(sizeChapters);
+  sections.forEach(function (section) { chapterObserver.observe(section); });
+  window.addEventListener('resize', sizeChapters);
+  sizeChapters();
+})();

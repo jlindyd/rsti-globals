@@ -654,3 +654,98 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
   .industry-card h3 { font-size: var(--sc-t-base); }
   .net-globe { opacity: 0.4; }
 }
+
+/* Homepage: clearer workshop actions and early author context. */
+.workshop-button { display:inline-flex; align-items:center; justify-content:center; gap:1rem; padding: .95rem 1.35rem; min-height:48px; border:1px solid var(--rsti-gold); border-radius:4px; background:var(--rsti-gold); color:#0b182b; font-weight:600; text-decoration:none; line-height:1.4; }
+.workshop-button:hover { background:#e2b667; border-color:#e2b667; }
+.workshop-button:focus-visible { outline:3px solid currentColor; outline-offset:5px; }
+.author-intro { display:grid; grid-template-columns:1fr 1.7fr; gap:2rem; border-bottom:1px solid var(--sc-hairline); padding-bottom:3rem; margin-bottom:3rem; }
+.author-intro h2 { font-family:var(--sc-font-display); font-size:clamp(1.8rem,3vw,2.7rem); line-height:1.15; margin-top:.75rem; }
+.author-intro p:not(.sc-label) { font-size:1.05rem; line-height:1.7; max-width:64ch; margin:0 0 1rem; }
+.contact-action { margin-top:2rem; }
+.contact-hint { display:block; margin-top:.75rem; font-size:.9rem; color:var(--sc-ink-soft); }
+.home-page .site-nav__chapter { display:none; }
+@media(max-width:700px) { .author-intro { grid-template-columns:1fr; gap:1rem; } .home-page .hero-ctas { align-items:flex-start; } .workshop-button { max-width:100%; text-align:center; } }
+
+@media(max-width:600px) { .home-page .site-nav__cta { display:none; } }
+
+/* Keep the next chapter below the opening viewport, including on tall screens. */
+.home-page #hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.field-preview { margin-bottom:3rem; }
+.field-preview__heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; margin-bottom:1.5rem; }
+.field-preview h3 { font-family:var(--sc-font-display); font-size:2rem; margin-top:.5rem; }
+.field-preview__photos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.field-preview__photos a { display:block; border-radius:8px; overflow:hidden; background:var(--rsti-navy); }
+.field-preview__photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
+@media(max-width:600px) { .field-preview__heading { align-items:start; flex-direction:column; } .field-preview__photos { grid-template-columns:1fr; } }
+
+/* A full-height book feature, in normal flow so all copy remains reachable. */
+.home-page .book-feature { min-height:100vh; min-height:100dvh; background:linear-gradient(120deg,#091423,#142a46); scroll-margin-top:60px; }
+.book-feature__inner { padding-block:clamp(5rem,9vh,8rem); }
+.book-feature__grid { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.2fr); gap:clamp(2.5rem,6vw,6rem); align-items:center; }
+.book-feature__cover { margin:0; padding:2rem; text-align:center; background:radial-gradient(ellipse,rgba(200,150,62,.13),transparent 70%); }
+.book-feature__cover img { display:block; width:min(100%,340px); height:auto; margin:auto; box-shadow:12px 20px 40px #0008; }
+.book-feature__cover figcaption { margin-top:1.8rem; font-size:.75rem; letter-spacing:.08em; color:#a7b3c8; }
+.book-feature__copy h2 { font-family:var(--sc-font-display); font-size:clamp(2rem,3.4vw,3.2rem); line-height:1.1; font-weight:400; margin:1rem 0 1.5rem; }
+.book-feature__copy h2 span { display:block; font-size:.64em; line-height:1.3; margin-top:.65rem; }
+.book-feature__authors { font-size:1rem; margin-bottom:1.5rem; color:#f4eee3; }
+.book-feature__authors span { display:block; font-size:.85rem; color:#a7b3c8; margin-top:.35rem; }
+.book-feature__topics { list-style:disc; padding-left:1.2rem; margin:1.5rem 0 2rem; color:#d5deea; line-height:1.65; }
+.book-feature__topics li + li { margin-top:.4rem; }
+.book-feature__actions { display:flex; gap:1.5rem; flex-wrap:wrap; align-items:center; }
+@media(max-width:700px) { .book-feature__grid { grid-template-columns:1fr; gap:2rem; } .book-feature__cover { padding:0 1.5rem; } .book-feature__cover img { max-width:250px; } .book-feature__inner { padding-block:5rem; } }
+
+/* Industry feature: photographic editorial layout over a subtle technical grid. */
+.sectors-feature { background-color:#0b192b; background-image:radial-gradient(ellipse at 90% 15%,#284b6d80,transparent 60%),linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px); background-size:auto,64px 64px,64px 64px; }
+.sectors-feature__inner { padding-block:clamp(5rem,9vw,8rem); }
+.sectors-feature__intro { display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:end; margin-bottom:3rem; }
+.sectors-feature h2 { font-family:var(--sc-font-display); font-size:clamp(2.2rem,4vw,3.8rem); line-height:1.12; font-weight:400; }
+.sectors-feature__intro .sc-lede { font-size:1.1rem; line-height:1.65; color:#c3cfdd; }
+.sectors-photos { display:grid; grid-template-columns:1.2fr 1fr; gap:1.5rem; margin-bottom:3rem; }
+.sectors-photos figure { margin:0; position:relative; overflow:hidden; border-radius:8px; }
+.sectors-photos img { width:100%; height:clamp(220px,28vw,380px); object-fit:cover; display:block; }
+.sectors-photos figcaption { position:absolute; bottom:0; left:0; right:0; padding:3rem 1.5rem 1.25rem; background:linear-gradient(transparent,#071423ed); color:#fff; font-size:.9rem; }
+.sectors-label { color:var(--rsti-gold); margin-bottom:1.5rem; }
+.sectors-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; margin-bottom:2.5rem; }
+.sectors-grid article { border-top:1px solid #c8963e66; padding-top:1rem; }
+.sectors-grid h3 { font-family:var(--sc-font-display); font-size:1.4rem; margin-bottom:.65rem; }
+.sectors-grid p { color:#c3cfdd; line-height:1.65; font-size:.95rem; }
+@media(max-width:700px) { .sectors-feature__intro,.sectors-photos { grid-template-columns:1fr; gap:1.5rem; } .sectors-grid { grid-template-columns:1fr; gap:1.5rem; } .sectors-photos img { height:auto; aspect-ratio:4/3; } }
+
+/* Alternating homepage chapters: blue, white, blue, white. */
+.home-page .chapter--light { --sc-canvas:#faf8f4; --sc-ink:#14213a; --sc-ink-soft:#4e5e73; background-color:var(--sc-canvas); color:var(--sc-ink); }
+.home-page .chapter--dark { --sc-canvas:#0f1f38; --sc-ink:#f4eee3; --sc-ink-soft:#bcc8d9; color:var(--sc-ink); }
+.home-page .sectors-feature.chapter--light { background-image:radial-gradient(ellipse at 90% 15%,#c8d9e780,transparent 60%),linear-gradient(#14213a06 1px,transparent 1px),linear-gradient(90deg,#14213a06 1px,transparent 1px); }
+.home-page .sectors-feature.chapter--light .sc-lede,.home-page .sectors-feature.chapter--light .sectors-grid p { color:var(--sc-ink-soft); }
+.home-page .book-feature.chapter--light { background:linear-gradient(120deg,#faf8f4,#e9eff5); }
+.home-page .book-feature.chapter--light .book-feature__authors { color:var(--sc-ink); }
+.home-page .book-feature.chapter--light .book-feature__authors span,.home-page .book-feature.chapter--light .book-feature__cover figcaption,.home-page .book-feature.chapter--light .book-feature__topics { color:var(--sc-ink-soft); }
+.home-page .chapter--light .link-cta,.home-page .chapter--light .sectors-label { color:#805b21; }
+.home-page #framework.chapter--light .framework-stage { background:var(--sc-canvas); color:var(--sc-ink); }
+
+/* Straight edges between homepage sections. */
+.home-page main > .chapter { border-radius: 0; }
+
+/* Each chapter stays behind the following chapter as it slides into view.
+   Tall chapters finish scrolling before they stick.
+
+   Hero is excluded: its height is forced to exactly one viewport
+   (min-height:100vh above), which makes --chapter-stick-top compute to 0 —
+   identical to plain `top:0`. A sticky element whose own height equals the
+   viewport never reaches its release point (confirmed empirically: it stays
+   pinned full-viewport for the rest of the page's scroll, not just its own
+   natural span), so Programs' incoming edge sweeps up through hero's still
+   fully-opaque, still on-screen text instead of only covering it once hero
+   has actually scrolled away. Letting hero scroll normally sidesteps this
+   entirely — it's gone from the viewport by the time Programs arrives. */
+.home-page main > .chapter:not(#hero) {
+  position: sticky;
+  top: var(--chapter-stick-top, 0px);
+  border-radius: 0;
+  box-shadow: none;
+  isolation: isolate;
+}
