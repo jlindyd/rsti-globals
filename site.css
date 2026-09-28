@@ -719,6 +719,10 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 /* Alternating homepage chapters: blue, white, blue, white. */
 .home-page .chapter--light { --sc-canvas:#faf8f4; --sc-ink:#14213a; --sc-ink-soft:#4e5e73; background-color:var(--sc-canvas); color:var(--sc-ink); }
 .home-page .chapter--dark { --sc-canvas:#0f1f38; --sc-ink:#f4eee3; --sc-ink-soft:#bcc8d9; color:var(--sc-ink); }
+
+/* Faint technical grid, echoing the Industries/Book sections, for the otherwise flat chapters. Kept quieter so it never competes with copy. */
+.home-page .chapter--textured.chapter--dark { background-image:radial-gradient(ellipse at 12% 85%,#1d3a5f66,transparent 55%),linear-gradient(#ffffff03 1px,transparent 1px),linear-gradient(90deg,#ffffff03 1px,transparent 1px); background-size:auto,72px 72px,72px 72px; }
+.home-page .chapter--textured.chapter--light { background-image:radial-gradient(ellipse at 12% 85%,#c8d9e755,transparent 55%),linear-gradient(#14213a05 1px,transparent 1px),linear-gradient(90deg,#14213a05 1px,transparent 1px); background-size:auto,72px 72px,72px 72px; }
 .home-page .sectors-feature.chapter--light { background-image:radial-gradient(ellipse at 90% 15%,#c8d9e780,transparent 60%),linear-gradient(#14213a06 1px,transparent 1px),linear-gradient(90deg,#14213a06 1px,transparent 1px); }
 .home-page .sectors-feature.chapter--light .sc-lede,.home-page .sectors-feature.chapter--light .sectors-grid p { color:var(--sc-ink-soft); }
 .home-page .book-feature.chapter--light { background:linear-gradient(120deg,#faf8f4,#e9eff5); }
