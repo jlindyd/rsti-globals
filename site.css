@@ -368,8 +368,9 @@ body { background: var(--rsti-navy); }
 
 /* ------------------------------------------------------------ mission -- */
 .mission-h2 { max-width: 20ch; margin-bottom: var(--sc-9); }
+.principles-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sc-9); align-items: start; }
 .lean-robust-feature {
-  max-width: 56ch; margin-bottom: var(--sc-9); padding: var(--sc-7);
+  padding: var(--sc-7);
   border: 1px solid var(--sc-hairline); border-radius: var(--sc-r-md);
   background: color-mix(in oklab, var(--sc-canvas) 94%, var(--rsti-gold) 6%);
 }
@@ -378,6 +379,7 @@ body { background: var(--rsti-navy); }
 .lean-robust-feature .sc-body:last-child { margin-bottom: 0; }
 .lean-robust-quote { font-family: var(--sc-font-display); font-style: italic; font-size: var(--sc-t-lg); color: var(--rsti-gold); margin: 0 0 var(--sc-5); }
 .principle-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--sc-hairline); }
+@media (max-width: 900px) { .principles-split { grid-template-columns: 1fr; gap: var(--sc-8); } }
 .principle-list li {
   display: grid; grid-template-columns: 4rem 1fr; gap: var(--sc-6);
   padding-block: var(--sc-6); border-bottom: 1px solid var(--sc-hairline);
