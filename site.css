@@ -719,22 +719,18 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .book-feature__actions { display:flex; gap:1.5rem; flex-wrap:wrap; align-items:center; }
 @media(max-width:700px) { .book-feature__grid { grid-template-columns:1fr; gap:2rem; } .book-feature__cover { padding:0 1.5rem; } .book-feature__cover img { max-width:250px; } .book-feature__inner { padding-block:5rem; } }
 
-/* Industry feature: photographic editorial layout over a subtle technical grid. */
+/* Industry feature: subtle technical grid, title/lede matching the other chapters. */
 .sectors-feature { background-color:#0b192b; background-image:radial-gradient(ellipse at 90% 15%,#284b6d80,transparent 60%),linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px); background-size:auto,64px 64px,64px 64px; }
 .sectors-feature__inner { padding-block:clamp(5rem,9vw,8rem); }
-.sectors-feature__intro { display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:end; margin-bottom:3rem; }
-.sectors-feature h2 { font-family:var(--sc-font-display); font-size:clamp(2.2rem,4vw,3.8rem); line-height:1.12; font-weight:400; }
-.sectors-feature__intro .sc-lede { font-size:1.1rem; line-height:1.65; color:#c3cfdd; }
-.sectors-photos { display:grid; grid-template-columns:1.2fr 1fr; gap:1.5rem; margin-bottom:3rem; }
-.sectors-photos figure { margin:0; position:relative; overflow:hidden; border-radius:8px; }
-.sectors-photos img { width:100%; height:clamp(220px,28vw,380px); object-fit:cover; display:block; }
-.sectors-photos figcaption { position:absolute; bottom:0; left:0; right:0; padding:3rem 1.5rem 1.25rem; background:linear-gradient(transparent,#071423ed); color:#fff; font-size:.9rem; }
+.sectors-feature h2 { max-width: 20ch; margin-bottom: var(--sc-6); }
+.sectors-lede { max-width: 50ch; font-size: var(--sc-t-base); line-height: 1.65; color:#c3cfdd; margin-bottom: var(--sc-8); }
 .sectors-label { color:var(--rsti-gold); margin-bottom:1.5rem; }
 .sectors-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; margin-bottom:2.5rem; }
 .sectors-grid article { border-top:1px solid #c8963e66; padding-top:1rem; }
+.sector-icon { width: 2rem; height: 2rem; color: var(--rsti-gold); margin-bottom: 1rem; }
 .sectors-grid h3 { font-family:var(--sc-font-display); font-size:1.4rem; margin-bottom:.65rem; }
 .sectors-grid p { color:#c3cfdd; line-height:1.65; font-size:.95rem; }
-@media(max-width:700px) { .sectors-feature__intro,.sectors-photos { grid-template-columns:1fr; gap:1.5rem; } .sectors-grid { grid-template-columns:1fr; gap:1.5rem; } .sectors-photos img { height:auto; aspect-ratio:4/3; } }
+@media(max-width:700px) { .sectors-grid { grid-template-columns:1fr; gap:1.5rem; } }
 
 /* Alternating homepage chapters: blue, white, blue, white. */
 .home-page .chapter--light { --sc-canvas:#faf8f4; --sc-ink:#14213a; --sc-ink-soft:#4e5e73; background-color:var(--sc-canvas); color:var(--sc-ink); }
@@ -744,7 +740,8 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .home-page .chapter--textured.chapter--dark { background-image:radial-gradient(ellipse at 12% 85%,#1d3a5f66,transparent 55%),linear-gradient(#ffffff03 1px,transparent 1px),linear-gradient(90deg,#ffffff03 1px,transparent 1px); background-size:auto,72px 72px,72px 72px; }
 .home-page .chapter--textured.chapter--light { background-image:radial-gradient(ellipse at 12% 85%,#c8d9e755,transparent 55%),linear-gradient(#14213a05 1px,transparent 1px),linear-gradient(90deg,#14213a05 1px,transparent 1px); background-size:auto,72px 72px,72px 72px; }
 .home-page .sectors-feature.chapter--light { background-image:radial-gradient(ellipse at 90% 15%,#c8d9e780,transparent 60%),linear-gradient(#14213a06 1px,transparent 1px),linear-gradient(90deg,#14213a06 1px,transparent 1px); }
-.home-page .sectors-feature.chapter--light .sc-lede,.home-page .sectors-feature.chapter--light .sectors-grid p { color:var(--sc-ink-soft); }
+.home-page .sectors-feature.chapter--light .sectors-lede,.home-page .sectors-feature.chapter--light .sectors-grid p { color:var(--sc-ink-soft); }
+.home-page .sectors-feature.chapter--light .sector-icon { color: var(--rsti-gold-deep); }
 .home-page .book-feature.chapter--light { background:linear-gradient(120deg,#faf8f4,#e9eff5); }
 .home-page .book-feature.chapter--light .book-feature__authors { color:var(--sc-ink); }
 .home-page .book-feature.chapter--light .book-feature__authors span,.home-page .book-feature.chapter--light .book-feature__cover figcaption,.home-page .book-feature.chapter--light .book-feature__topics { color:var(--sc-ink-soft); }
