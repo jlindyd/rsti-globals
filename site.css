@@ -344,20 +344,19 @@ body { background: var(--rsti-navy); }
   body:has(.trace-rail) .industries-rail { padding-left: calc(var(--sc-gutter) + 3.5rem); }
 }
 
-/* ---------------------------------------------------------------- link -- */
+/* --------------------------------------------------------- link / cta -- */
+/* Secondary button: same shape as .workshop-button, gray instead of gold. */
 .link-cta {
-  display: inline-flex; align-items: baseline; gap: 0.4em;
-  color: var(--sc-accent-local); text-decoration: underline;
-  text-decoration-thickness: 1px; text-underline-offset: 0.28em;
-  font-weight: 600; font-size: var(--sc-t-base);
-  transition: gap var(--sc-d-fast) var(--sc-ease-out), opacity var(--sc-d-fast) var(--sc-ease-out);
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+  padding: .95rem 1.35rem; min-height: 48px; border-radius: 4px;
+  background: #5b6472; border: 1px solid #5b6472; color: #fff;
+  text-decoration: none; font-weight: 600; font-size: var(--sc-t-base); line-height: 1.4;
+  transition: background var(--sc-d-fast) var(--sc-ease-out), border-color var(--sc-d-fast) var(--sc-ease-out), gap var(--sc-d-fast) var(--sc-ease-out);
 }
-.link-cta:hover { gap: 0.65em; }
-.link-cta:focus-visible { outline-offset: 4px; }
+.link-cta:hover { background: #6e7888; border-color: #6e7888; gap: 0.8em; }
+.link-cta:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
 .link-cta span { transition: transform var(--sc-d-fast) var(--sc-ease-out); }
 .link-cta:hover span { transform: translateX(2px); }
-.link-cta--quiet { color: var(--sc-ink-soft); }
-.link-cta--onstage { color: var(--rsti-gold); }
 
 /* ------------------------------------------------------------ programs -- */
 .paths-feature { margin-bottom: var(--sc-10); }
@@ -745,7 +744,7 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .home-page .book-feature.chapter--light { background:linear-gradient(120deg,#faf8f4,#e9eff5); }
 .home-page .book-feature.chapter--light .book-feature__authors { color:var(--sc-ink); }
 .home-page .book-feature.chapter--light .book-feature__authors span,.home-page .book-feature.chapter--light .book-feature__cover figcaption,.home-page .book-feature.chapter--light .book-feature__topics { color:var(--sc-ink-soft); }
-.home-page .chapter--light .link-cta,.home-page .chapter--light .sectors-label { color:#805b21; }
+.home-page .chapter--light .sectors-label { color:#805b21; }
 .home-page #framework.chapter--light .framework-stage { background:var(--sc-canvas); color:var(--sc-ink); }
 
 /* Straight edges between homepage sections. */
