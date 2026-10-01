@@ -507,9 +507,9 @@ body { background: var(--rsti-navy); }
 /* ---------------------------------------------------------------- close -- */
 .chapter--close .sc-display--lg { max-width: 18ch; }
 .close-intro { display: grid; grid-template-columns: auto 1fr; gap: var(--sc-9); align-items: start; margin-bottom: var(--sc-9); }
-.close-portrait { width: 160px; height: 200px; object-fit: cover; border-radius: var(--sc-r-md); }
+.close-portrait { width: 260px; height: 325px; object-fit: cover; border-radius: var(--sc-r-md); }
 .close-lede { max-width: 48ch; margin: var(--sc-5) 0 var(--sc-7); }
-@media (max-width: 700px) { .close-intro { grid-template-columns: 1fr; } .close-portrait { width: 120px; height: 150px; } }
+@media (max-width: 700px) { .close-intro { grid-template-columns: 1fr; } .close-portrait { width: 180px; height: 225px; } }
 .colophon { border-top: 1px solid var(--sc-hairline); padding-top: var(--sc-6); display: flex; flex-wrap: wrap; gap: var(--sc-2) var(--sc-6); align-items: center; }
 .colophon p { margin: 0; }
 .colophon-nav { display: flex; flex-wrap: wrap; gap: var(--sc-5); margin-left: auto; }
@@ -753,16 +753,18 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 /* Each chapter stays behind the following chapter as it slides into view.
    Tall chapters finish scrolling before they stick.
 
-   Hero is excluded: its height is forced to exactly one viewport
-   (min-height:100vh above), which makes --chapter-stick-top compute to 0 —
+   Hero and Book are excluded: both are forced to exactly one viewport
+   (min-height:100vh), which makes --chapter-stick-top compute to 0 —
    identical to plain `top:0`. A sticky element whose own height equals the
    viewport never reaches its release point (confirmed empirically: it stays
    pinned full-viewport for the rest of the page's scroll, not just its own
-   natural span), so Programs' incoming edge sweeps up through hero's still
-   fully-opaque, still on-screen text instead of only covering it once hero
-   has actually scrolled away. Letting hero scroll normally sidesteps this
-   entirely — it's gone from the viewport by the time Programs arrives. */
-.home-page main > .chapter:not(#hero) {
+   natural span), so the next chapter's incoming edge sweeps up through its
+   still fully-opaque, still on-screen content instead of only covering it
+   once it has actually scrolled away — visible as a sliver of the old
+   section peeking in at the very top. Letting these two scroll normally
+   sidesteps this entirely — they're gone from the viewport by the time the
+   next chapter arrives. */
+.home-page main > .chapter:not(#hero):not(#book) {
   position: sticky;
   top: var(--chapter-stick-top, 0px);
   border-radius: 0;
