@@ -466,10 +466,11 @@ body { background: var(--rsti-navy); }
 /* ------------------------------------------------------------- pathway -- */
 .pathway-steps { list-style: none; margin: var(--sc-9) 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--sc-hairline); }
 .pathway-step {
-  display: grid; grid-template-columns: 8rem 1fr; column-gap: var(--sc-6); row-gap: 0.25em; align-items: baseline;
+  display: grid; grid-template-columns: 8rem 1fr; column-gap: var(--sc-6); row-gap: 0.25em; align-items: start;
   padding-block: var(--sc-5); border-bottom: 1px solid var(--sc-hairline);
   padding-left: calc(var(--lvl) * 0.6rem);
 }
+.pathway-lvl { padding-top: 0.3em; }
 .pathway-lvl { grid-column: 1; grid-row: 1; font-family: var(--sc-font-mono); font-size: var(--sc-t-xs); letter-spacing: var(--sc-track-wide); text-transform: uppercase; color: var(--sc-accent-local); }
 .pathway-step h3 { grid-column: 2; grid-row: 1; font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-lg); margin: 0 0 0.2em; }
 .pathway-step p { grid-column: 2; grid-row: 2; margin: 0; }
