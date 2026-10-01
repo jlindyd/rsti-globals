@@ -254,7 +254,8 @@ body { background: var(--rsti-navy); }
   font-family: var(--sc-font-display); font-style: italic;
   font-size: var(--sc-t-lg); color: var(--rsti-gold);
 }
-.hero-lede { max-width: 46ch; margin-bottom: var(--sc-7); }
+.hero-lede { max-width: 46ch; margin-bottom: var(--sc-6); }
+.hero-thesis { max-width: 50ch; margin-bottom: var(--sc-7); font-size: var(--sc-t-sm); color: var(--sc-ink-soft); line-height: 1.6; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: var(--sc-6); margin-bottom: var(--sc-8); }
 .domain-list {
   list-style: none; display: flex; flex-wrap: wrap; gap: 0 var(--sc-4);
@@ -359,6 +360,17 @@ body { background: var(--rsti-navy); }
 .link-cta--onstage { color: var(--rsti-gold); }
 
 /* ------------------------------------------------------------ programs -- */
+.paths-feature { margin-bottom: var(--sc-10); }
+.paths-feature h2 { max-width: 22ch; margin-bottom: var(--sc-7); }
+.paths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sc-7); }
+.path-card { padding: var(--sc-6); border: 1px solid var(--sc-hairline); border-radius: var(--sc-r-md); }
+.path-card .sc-label { margin-bottom: var(--sc-3); color: var(--rsti-gold-deep); }
+.chapter--dark .path-card .sc-label { color: var(--rsti-gold); }
+.path-audience { font-weight: 600; margin-bottom: var(--sc-4); }
+.path-card .sc-body { color: var(--sc-ink-soft); margin-bottom: var(--sc-4); }
+.path-output { font-weight: 600; margin: 0; }
+@media (max-width: 1100px) { .paths-grid { grid-template-columns: 1fr; } }
+
 .programs-grid { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: var(--sc-9); align-items: start; }
 .program h2 { margin: var(--sc-3) 0 var(--sc-4); }
 .program p.sc-body { margin-bottom: var(--sc-5); }
@@ -484,6 +496,7 @@ body { background: var(--rsti-navy); }
 .insights-list { list-style: none; margin: 0; padding: 0; }
 .insights-list li { padding-block: var(--sc-5); border-bottom: 1px solid var(--sc-hairline); }
 .insights-list h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-lg); margin: 0.3em 0 0.2em; }
+.pathway-plan { max-width: 62ch; color: var(--sc-ink-soft); font-size: var(--sc-t-sm); line-height: 1.6; }
 .pathway-cta { margin-top: var(--sc-8); }
 
 /* ----------------------------------------------------------------- book -- */
