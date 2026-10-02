@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   "use strict";
 
   /* Gallery: renders from window.RSTI_GALLERY (gallery-data.js) and drives a
@@ -213,46 +213,6 @@
     svg.appendChild(frag);
   }
   Array.prototype.forEach.call(document.querySelectorAll('[data-graphic="scatter-grid"]'), renderScatterGrid);
-
-  /* Signature move: the RVF flow draws itself under the reader's scroll.
-     Bespoke, reading the pinned framework act's own --sc-p; the engine is
-     never touched. See BRIEF.md §5. */
-  var act = document.getElementById("framework-act");
-  if (!act) return;
-  var fill = act.querySelector(".flow__fill");
-  var nodes = Array.prototype.slice.call(act.querySelectorAll(".flow__node"));
-  var n = nodes.length;
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function apply(p) {
-    if (fill) fill.style.transform = "scaleY(" + p + ")";
-    for (var i = 0; i < n; i++) {
-      var start = i / n;
-      var end = (i + 0.6) / n;
-      var local = (p - start) / (end - start);
-      if (local < 0) local = 0;
-      if (local > 1) local = 1;
-      if (i === 0) local = 1; // the first node is the ground: already there
-      var node = nodes[i];
-      node.style.opacity = local;
-      node.style.transform = "translateX(" + ((1 - local) * -10) + "px)";
-      node.classList.toggle("is-lit", local > 0.5);
-    }
-  }
-
-  if (reduced) {
-    apply(1);
-    return;
-  }
-
-  function tick() {
-    var raw = getComputedStyle(act).getPropertyValue("--sc-p");
-    var p = parseFloat(raw);
-    if (isNaN(p)) p = 0;
-    apply(p);
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
 })();
 
 /* Match the chapter slide-over transition across the homepage. */
@@ -268,4 +228,35 @@
   sections.forEach(function (section) { chapterObserver.observe(section); });
   window.addEventListener('resize', sizeChapters);
   sizeChapters();
+})();
+
+/* Anchor jumps: chapters are sticky, so the browser's own anchor scroll lands
+   wherever a stuck chapter happens to be drawn. Scroll to each chapter's
+   natural position in the flow instead (sum of the chapters above it). */
+(function () {
+  if (!document.body.classList.contains('home-page')) return;
+  var main = document.querySelector('main');
+  if (!main) return;
+  function naturalTop(target) {
+    var top = main.offsetTop;
+    var kids = main.children;
+    for (var i = 0; i < kids.length && kids[i] !== target; i++) top += kids[i].offsetHeight;
+    return top;
+  }
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(id, push) {
+    var target = id ? document.getElementById(id) : main;
+    if (!target || target.parentElement !== main) return false;
+    window.scrollTo({ top: target === main ? 0 : naturalTop(target), behavior: reduced ? 'auto' : 'smooth' });
+    if (push && history.replaceState) history.replaceState(null, '', id ? '#' + id : location.pathname);
+    return true;
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if (id === 'top') id = '';
+    if (go(id, true)) e.preventDefault();
+  });
+  if (location.hash.length > 1) window.addEventListener('load', function () { go(location.hash.slice(1), false); });
 })();
