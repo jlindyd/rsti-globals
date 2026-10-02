@@ -772,3 +772,9 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
   box-shadow: none;
   isolation: isolate;
 }
+
+.about-body .sc-body { max-width: 68ch; margin-bottom: var(--sc-5); }
+.about-body h2 { margin: var(--sc-7) 0 var(--sc-3); }
+.about-list { max-width: 68ch; padding-left: 1.2rem; line-height: 1.7; }
+.about-list li + li { margin-top: .35rem; }
+.about-list ul { margin-top: .35rem; padding-left: 1.2rem; list-style: circle; }
