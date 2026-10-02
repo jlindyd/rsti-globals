@@ -792,3 +792,8 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .home-page .sectors-grid h3 { margin-bottom: .4rem; }
 .home-page .sectors-feature__inner { padding-block: 4.5rem 1.5rem; }
 .home-page .sectors-grid article { padding-top: .75rem; }
+
+/* Breathing room under each chapter's last element, so the next chapter sliding over it doesn't crowd the content. */
+.home-page main > .chapter:not(#hero) .chapter__inner,
+.home-page .sectors-feature__inner { padding-bottom: clamp(5rem, 11vh, 7.5rem); }
+.home-page .framework-stage { padding-bottom: clamp(4.5rem, 10vh, 6.5rem); }
