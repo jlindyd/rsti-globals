@@ -406,14 +406,14 @@ body { background: var(--rsti-navy); }
 @media (max-width: 860px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
 
 /* ----------------------------------------------------------- framework -- */
-.framework-stage { display: flex; align-items: center; padding-block: clamp(4rem, 8vw, 7rem); }
+.framework-stage { display: flex; align-items: center; padding-block: clamp(4.5rem, 9vh, 6rem) clamp(2rem, 5vh, 4rem); }
 .framework-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: var(--sc-10); align-items: center; width: 100%; }
 .framework-intro { max-width: 34ch; }
 .framework-quote { font-family: var(--sc-font-display); font-style: italic; font-size: var(--sc-t-lg); color: var(--sc-ink); margin: var(--sc-6) 0; max-width: 22ch; }
 .framework-method { color: var(--sc-ink-soft); margin: 0 0 var(--sc-6); font-size: var(--sc-t-sm); letter-spacing: var(--sc-track-snug); }
 .framework-note { color: var(--sc-ink-soft); margin-bottom: var(--sc-6); }
 
-.flow { position: relative; height: 640px; display: flex; }
+.flow { position: relative; height: min(62vh, 620px); min-height: 440px; display: flex; }
 .flow__track {
   position: relative; width: 2px; margin-inline: 1.4rem 0; flex-shrink: 0;
   background: color-mix(in oklab, var(--sc-ink) 16%, transparent);
@@ -766,3 +766,29 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 /* Full-height close so the final anchors (Book, Collaborate) can reach the top of the viewport. */
 .home-page #contact { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; }
 .home-page #contact > .chapter__inner { width: 100%; }
+
+/* Every home chapter fills at least one screen, content centred. The +2px keeps
+   a chapter from being exactly one viewport tall, which would leave it stuck
+   under the sticky stack instead of releasing. */
+.home-page main > .chapter:not(#hero) {
+  min-height: calc(100vh + 2px); min-height: calc(100dvh + 2px);
+  display: flex; align-items: center;
+}
+.home-page main > .chapter:not(#hero) > * { width: 100%; }
+
+/* Tighter vertical rhythm so shorter chapters fit one screen. */
+.home-page main > .chapter:not(#hero) .chapter__inner,
+.home-page .sectors-feature__inner { padding-block: clamp(4.5rem, 9vh, 6rem) clamp(2rem, 5vh, 3.5rem); }
+.home-page #hero .chapter__inner--hero { padding-block: clamp(4.5rem, 9vh, 6rem) clamp(1.5rem, 4vh, 3rem); }
+.home-page #hero .hero-ctas { margin-bottom: var(--sc-6); }
+.home-page .sectors-lede { margin-bottom: var(--sc-6); }
+.home-page .sectors-grid { gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+.home-page #hero .hero-h1 { margin-bottom: var(--sc-4); }
+.home-page #hero .hero-thesis { margin-bottom: var(--sc-5); }
+.home-page #hero .hero-eyebrow { margin-bottom: var(--sc-4); }
+.home-page .sectors-feature h2 { margin-bottom: var(--sc-4); }
+.home-page .sector-icon { width: 1.6rem; height: 1.6rem; margin-bottom: .6rem; }
+.home-page .sectors-label { margin-bottom: 1rem; }
+.home-page .sectors-grid h3 { margin-bottom: .4rem; }
+.home-page .sectors-feature__inner { padding-block: 4.5rem 1.5rem; }
+.home-page .sectors-grid article { padding-top: .75rem; }
