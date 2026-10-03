@@ -797,3 +797,18 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .home-page main > .chapter:not(#hero) .chapter__inner,
 .home-page .sectors-feature__inner { padding-bottom: clamp(5rem, 11vh, 7.5rem); }
 .home-page .framework-stage { padding-bottom: clamp(4.5rem, 10vh, 6.5rem); }
+
+/* Upcoming event */
+.hero-event {
+  display: inline-block; margin: 0 0 var(--sc-5) var(--sc-3); padding: .5em .9em; border-radius: var(--sc-r-pill);
+  background: var(--rsti-gold); color: #0b182b; font-size: var(--sc-t-xs); font-weight: 600; letter-spacing: var(--sc-track-wide);
+  text-transform: uppercase; text-decoration: none; vertical-align: top;
+}
+.hero-event:hover { background: #e2b667; }
+.event-card { display: grid; grid-template-columns: minmax(12rem, 18rem) 1fr; gap: var(--sc-9); align-items: start; padding-top: var(--sc-6); border-top: 1px solid var(--sc-hairline); }
+.event-card__date { font-family: var(--sc-font-display); font-size: var(--sc-t-2xl); line-height: 1.1; margin: 0 0 var(--sc-3); color: var(--rsti-gold); }
+.event-card__time, .event-card__where { margin: 0 0 var(--sc-2); color: var(--sc-ink-soft); }
+.event-card__body .sc-label { color: var(--rsti-gold); margin-bottom: var(--sc-3); }
+.event-card__body h2 { max-width: 28ch; margin-bottom: var(--sc-5); }
+.event-card__body .sc-body { max-width: 60ch; margin-bottom: var(--sc-6); color: var(--sc-ink-soft); }
+@media (max-width: 860px) { .event-card { grid-template-columns: 1fr; gap: var(--sc-6); } .hero-event { margin-left: 0; } }
