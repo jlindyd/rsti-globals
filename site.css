@@ -800,7 +800,7 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 
 /* Upcoming event */
 .hero-event {
-  display: inline-block; margin: 0 0 var(--sc-5) var(--sc-3); padding: .5em .9em; border-radius: var(--sc-r-pill);
+  display: inline-block; margin: 0 0 var(--sc-5); padding: .5em .9em; border-radius: var(--sc-r-pill);
   background: var(--rsti-gold); color: #0b182b; font-size: var(--sc-t-xs); font-weight: 600; letter-spacing: var(--sc-track-wide);
   text-transform: uppercase; text-decoration: none; vertical-align: top;
 }
