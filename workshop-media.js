@@ -19,8 +19,11 @@ window.RSTI_WORKSHOPS = {
     { type: "image", src: "assets/workshops/helicopter-workshop-group-photo.jpg", caption: "The workshop group, University of Houston Industrial Engineering" }
   ],
   "workshop-lss": [
-    { type: "image", src: "", caption: "" },
-    { type: "video", src: "", poster: "", caption: "" }
+    { type: "image", src: "assets/workshops/lss-green-belt-sipoc-session.jpg", caption: "Green Belt training: working through the SIPOC diagram" },
+    { type: "image", src: "assets/workshops/lss-green-belt-process-flow-lecture.jpg", caption: "An instructor walks the class through a process flow" },
+    { type: "image", src: "assets/workshops/lss-green-belt-dmaic-roadmap.jpg", caption: "The DMAIC roadmap: Define, Measure, Analyze, Improve, Control" },
+    { type: "image", src: "assets/workshops/lss-green-belt-certificates-group.jpg", caption: "Participants with their Green Belt certificates" },
+    { type: "image", src: "assets/workshops/lss-green-belt-certificate-celebration.jpg", caption: "Celebrating completion of the training" }
   ],
   "workshop-dfss": [
     { type: "image", src: "", caption: "" },
