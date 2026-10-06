@@ -7,6 +7,8 @@
 window.RSTI_WORKSHOPS = {
   "workshop-oex": [
     { type: "image", src: "assets/workshops/helicopter-workshop-prototyping.jpg", caption: "Teams cut and tape their helicopter prototypes" },
+    { type: "embed", src: "https://www.youtube-nocookie.com/embed/YaLVQzKC-6c", caption: "Workshop video 1" },
+    { type: "embed", src: "https://www.youtube-nocookie.com/embed/KWWpXQyEuEQ?start=8", caption: "Workshop video 2" },
     { type: "image", src: "assets/workshops/helicopter-workshop-testing.jpg", caption: "Dropping a prototype to test how it spins" },
     { type: "image", src: "assets/workshops/helicopter-workshop-exercise-instructions.jpg", caption: "The five-step exercise: Empathize, Define, Ideate, Prototype, Test" },
     { type: "image", src: "assets/workshops/helicopter-workshop-dfss-healthcare-talk.jpg", caption: "A session on Design for Six Sigma in healthcare" },
