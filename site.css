@@ -878,8 +878,6 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 
 /* Workshop example popup */
 .has-dialog { overflow: hidden; }
-.program-more { margin: var(--sc-4) 0 0 !important; }
-.program-more .link-cta { cursor: pointer; font-family: inherit; }
 .workshop-dialog { width: min(94vw, 980px); max-height: 90vh; padding: 0; border: 1px solid rgba(200,150,62,.35); border-radius: 14px; background: #0f1f38; color: #f4eee3; overflow: auto; }
 .workshop-dialog::backdrop { background: rgba(5,12,24,.72); backdrop-filter: blur(4px); }
 .workshop-dialog__close { position: absolute; top: .6rem; right: .8rem; z-index: 2; width: 2.4rem; height: 2.4rem; border-radius: 50%; border: 1px solid rgba(244,238,227,.3); background: rgba(15,31,56,.8); color: #f4eee3; font-size: 1.5rem; line-height: 1; cursor: pointer; }
@@ -909,3 +907,34 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .wd-days ul { margin: 0; padding-left: 1.1rem; font-size: var(--sc-t-xs); line-height: 1.55; color: #c3cfdd; }
 .wd-days li + li { margin-top: .2rem; }
 .wd-cta .link-cta { margin-left: var(--sc-2); cursor: pointer; font-family: inherit; }
+
+/* Program cards: whole card opens its popup */
+.program-card { position: relative; cursor: pointer; transition: transform 200ms var(--sc-ease-out); }
+.program-card:hover { transform: translateY(-4px); }
+.program-thumb { position: relative; height: 96px; border-radius: 8px; margin-bottom: var(--sc-4); background: linear-gradient(135deg, #0f1f38, #173a63); display: grid; place-items: center; overflow: hidden; box-shadow: 0 8px 22px rgba(15,31,56,.18); }
+.program-thumb svg { height: 80%; width: auto; }
+.program-thumb__play { position: absolute; left: .6rem; bottom: .5rem; display: inline-flex; align-items: center; gap: .5rem; padding: .32em .8em; border-radius: 999px; background: rgba(15,31,56,.82); color: #f4eee3; font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; transition: background 160ms, color 160ms; }
+.program-thumb__play i { width: 0; height: 0; border-left: 7px solid var(--rsti-gold); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.program-card:hover .program-thumb__play { background: var(--rsti-gold); color: #0b182b; }
+.program-card:hover .program-thumb__play i { border-left-color: #0b182b; }
+.program-open { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; text-align: left; letter-spacing: inherit; cursor: pointer; }
+.program-open::after { content: ""; position: absolute; inset: 0; }
+.program-card:hover .program-open { text-decoration: underline; text-decoration-color: var(--rsti-gold); text-underline-offset: .2em; }
+.program-card:has(.program-open:focus-visible) { outline: 2px solid var(--rsti-gold); outline-offset: 8px; border-radius: 4px; }
+
+/* Full-screen workshop popup */
+.workshop-dialog { width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; border: 0; border-radius: 0; }
+.workshop-dialog__grid { grid-template-columns: 1.5fr 1fr; min-height: 100%; }
+.workshop-dialog__media { position: sticky; top: 0; height: 100vh; padding: var(--sc-7); justify-content: center; align-items: center; }
+.workshop-dialog__media svg { max-height: 62vh; }
+.workshop-dialog__body { padding: var(--sc-10) var(--sc-8) var(--sc-9); max-width: 680px; }
+.workshop-dialog__close { top: 1rem; right: 1.2rem; width: 2.8rem; height: 2.8rem; position: fixed; }
+.workshop-dialog__media.has-media > svg, .workshop-dialog__media.has-media > figcaption { display: none; }
+.wd-gallery { width: 100%; }
+.wd-stage { aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; }
+.wd-stage img, .wd-stage video, .wd-stage iframe { width: 100%; height: 100%; object-fit: contain; border: 0; display: block; }
+.wd-cap { min-height: 1.4em; margin: var(--sc-3) 0 0; font-size: var(--sc-t-sm); color: #c3cfdd; text-align: center; }
+.wd-thumbs { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-top: var(--sc-3); }
+.wd-thumbs button { width: 2.6rem; height: 2.6rem; border-radius: 8px; border: 1px solid rgba(244,238,227,.3); background: rgba(244,238,227,.06); color: #f4eee3; cursor: pointer; font-family: var(--sc-font-mono); font-size: var(--sc-t-xs); }
+.wd-thumbs button.is-on { border-color: var(--rsti-gold); color: var(--rsti-gold); }
+@media (max-width: 900px) { .workshop-dialog__grid { grid-template-columns: 1fr; } .workshop-dialog__media { position: static; height: auto; padding: var(--sc-6) var(--sc-5) var(--sc-3); } .workshop-dialog__body { padding: var(--sc-5); max-width: none; } }

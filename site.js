@@ -265,7 +265,7 @@
 (function () {
   var root = document.documentElement;
   function open(d) { if (d && !d.open) { d.showModal(); root.classList.add('has-dialog'); } }
-  function close(d) { if (d && d.open) d.close(); root.classList.remove('has-dialog'); }
+  function close(d) { if (d && d.open) d.close(); root.classList.remove('has-dialog'); if (d) { var g = d.querySelector('.wd-gallery'); if (g) g.remove(); } }
   document.addEventListener('click', function (e) {
     var el = e.target.closest ? e.target : e.target.parentElement;
     var t = el.closest('[data-dialog]');
@@ -279,5 +279,52 @@
   Array.prototype.forEach.call(document.querySelectorAll('dialog'), function (d) {
     d.addEventListener('close', function () { root.classList.remove('has-dialog'); });
     d.addEventListener('cancel', function () { root.classList.remove('has-dialog'); });
+  });
+})();
+
+/* Workshop popup media gallery (see workshop-media.js). */
+(function () {
+  var data = window.RSTI_WORKSHOPS || {};
+  function build(item) {
+    var el;
+    if (item.type === 'video') {
+      el = document.createElement('video'); el.controls = true; el.playsInline = true; el.preload = 'metadata';
+      if (item.poster) el.poster = item.poster; el.src = item.src;
+    } else if (item.type === 'embed') {
+      el = document.createElement('iframe'); el.src = item.src; el.allowFullscreen = true; el.loading = 'lazy';
+      el.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen');
+    } else {
+      el = document.createElement('img'); el.src = item.src; el.alt = item.caption || '';
+    }
+    return el;
+  }
+  function render(fig) {
+    var items = (data[fig.getAttribute('data-media')] || []).filter(function (i) { return i && i.src; });
+    var old = fig.querySelector('.wd-gallery'); if (old) old.remove();
+    fig.classList.toggle('has-media', items.length > 0);
+    if (!items.length) return;
+    var g = document.createElement('div'); g.className = 'wd-gallery';
+    var stage = document.createElement('div'); stage.className = 'wd-stage';
+    var cap = document.createElement('p'); cap.className = 'wd-cap';
+    var strip = document.createElement('div'); strip.className = 'wd-thumbs';
+    function show(i) {
+      stage.textContent = ''; stage.appendChild(build(items[i])); cap.textContent = items[i].caption || '';
+      Array.prototype.forEach.call(strip.children, function (b, n) { b.classList.toggle('is-on', n === i); });
+    }
+    items.forEach(function (it, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Show item ' + (i + 1));
+      b.textContent = it.type === 'video' || it.type === 'embed' ? '\u25B6' : String(i + 1);
+      b.addEventListener('click', function () { show(i); }); strip.appendChild(b);
+    });
+    g.appendChild(stage); g.appendChild(cap); if (items.length > 1) g.appendChild(strip);
+    fig.insertBefore(g, fig.firstChild); show(0);
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-dialog]'); if (!t) return;
+    var d = document.getElementById(t.getAttribute('data-dialog')); if (!d) return;
+    var fig = d.querySelector('[data-media]'); if (fig) render(fig);
+  }, true);
+  Array.prototype.forEach.call(document.querySelectorAll('dialog'), function (d) {
+    d.addEventListener('close', function () { var g = d.querySelector('.wd-gallery'); if (g) g.remove(); });
   });
 })();
