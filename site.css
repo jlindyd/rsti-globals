@@ -877,3 +877,8 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .day-plan__who { display: inline-block; margin: 0 0 var(--sc-2); padding: .25em .7em; border-radius: var(--sc-r-pill); font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; border: 1px solid color-mix(in oklab, var(--sc-ink) 35%, transparent); color: var(--sc-ink-soft); }
 .day-plan__who--opex { background: var(--rsti-gold); border-color: var(--rsti-gold); color: #0b182b; font-weight: 600; }
 .program-card p.program-role { font-size: var(--sc-t-xs); line-height: 1.4; }
+
+/* Light-chapter contrast for gold accents (About, Collaborate). */
+.home-page .chapter--light .about-k,
+.home-page .chapter--light .about-quote span { color: var(--rsti-gold-deep); }
+.home-page .chapter--light .about-quote { border-left-color: var(--rsti-gold-deep); }
