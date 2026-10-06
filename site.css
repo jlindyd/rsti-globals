@@ -995,3 +995,7 @@ button.day-plan__who--opex:focus-visible { outline: 2px solid #f4eee3; outline-o
 .next-arrow:hover svg, .next-arrow:focus-visible svg { stroke: #0b182b; }
 .next-arrow:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 .hero-ctas .workshop-button span { animation: none; }.home-page #framework .framework-stage { padding-bottom: clamp(.5rem, 1.5vh, 1rem); }
+
+/* Circled arrow inside a button (matches the round next-section buttons) */
+.btn-arrow { display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; border: 2px solid currentColor; flex-shrink: 0; }
+.btn-arrow svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
