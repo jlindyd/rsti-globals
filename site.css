@@ -257,13 +257,6 @@ body { background: var(--rsti-navy); }
 .hero-lede { max-width: 46ch; margin-bottom: var(--sc-6); }
 .hero-thesis { max-width: 50ch; margin-bottom: var(--sc-7); font-size: var(--sc-t-sm); color: var(--sc-ink-soft); line-height: 1.6; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: var(--sc-6); margin-bottom: var(--sc-8); }
-.domain-list {
-  list-style: none; display: flex; flex-wrap: wrap; gap: 0 var(--sc-4);
-  padding: 0; margin: 0; font-family: var(--sc-font-mono); font-size: var(--sc-t-xs);
-  letter-spacing: var(--sc-track-wide); text-transform: uppercase; color: var(--sc-ink-soft);
-}
-.domain-list li + li::before { content: "·"; margin-right: var(--sc-4); color: var(--rsti-gold); }
-.domain-list li { display: flex; }
 
 /* ------------------------------------------------------------- trace rail --
    The side index: a clickable jump-to-section nav whose fill line is a
