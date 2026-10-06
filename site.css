@@ -961,8 +961,8 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .route-card:has(.program-open:focus-visible) { outline: 2px solid var(--rsti-gold); outline-offset: 4px; }
 
 /* Logo badge in the menu (the logo's text is black, so it sits on a light plate) */
-.site-nav__mark { display: inline-flex; align-items: center; background: #faf8f4; border-radius: 8px; padding: 3px 10px; }
-.site-nav__mark img { display: block; height: 34px; width: auto; }
+.site-nav__mark { display: inline-flex; align-items: center; background: #faf8f4; border-radius: 10px; padding: 4px 12px; }
+.site-nav__mark img { display: block; height: 38px; width: auto; }
 
 /* Clickable timeline tags */
 button.day-plan__who { cursor: pointer; transition: background 160ms, transform 160ms; }
