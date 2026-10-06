@@ -308,7 +308,7 @@
     var cap = document.createElement('p'); cap.className = 'wd-cap';
     var strip = document.createElement('div'); strip.className = 'wd-thumbs';
     function show(i) {
-      stage.textContent = ''; stage.appendChild(build(items[i])); cap.textContent = items[i].caption || '';
+      stage.textContent = ''; stage.className = 'wd-stage ' + (items[i].type === 'image' ? 'is-photo' : 'is-video'); stage.appendChild(build(items[i])); cap.textContent = items[i].caption || '';
       Array.prototype.forEach.call(strip.children, function (b, n) { b.classList.toggle('is-on', n === i); });
     }
     items.forEach(function (it, i) {

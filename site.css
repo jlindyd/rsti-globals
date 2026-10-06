@@ -942,3 +942,5 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .program-card:hover .program-play svg, .program-card:has(.program-open:focus-visible) .program-play svg { fill: #0b182b; }
 .program-card:hover .program-play::after, .program-card:has(.program-open:focus-visible) .program-play::after { opacity: 1; }.wd-steps em { font-style: normal; font-family: var(--sc-font-mono); font-size: var(--sc-t-xs); letter-spacing: .06em; text-transform: uppercase; color: var(--rsti-gold); margin-left: .5rem; }
 .wd-thumbs button.has-img { width: 4.2rem; height: 3rem; background-size: cover; background-position: center; padding: 0; }
+.wd-stage.is-photo { aspect-ratio: auto; height: min(66vh, 640px); }
+.wd-stage.is-photo img { object-fit: contain; }

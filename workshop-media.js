@@ -26,7 +26,12 @@ window.RSTI_WORKSHOPS = {
     { type: "image", src: "assets/workshops/lss-green-belt-certificate-celebration.jpg", caption: "Celebrating completion of the training" }
   ],
   "workshop-dfss": [
-    { type: "image", src: "", caption: "" },
-    { type: "video", src: "", poster: "", caption: "" }
+    { type: "image", src: "assets/workshops/dfss-billboard-participants-working.jpg", caption: "Participants work together on a Billboard Design Thinking canvas" },
+    { type: "image", src: "assets/workshops/dfss-billboard-moderator-training-poster.jpg", caption: "The seven-step method: Request, Qualify, Design, Offer, Deliver, Document, Archive" },
+    { type: "image", src: "assets/workshops/dfss-billboard-workshop-lifecycle.jpg", caption: "The Billboard Design Thinking workshop life-cycle, with typical hours per stage" },
+    { type: "image", src: "assets/workshops/dfss-billboard-request-value-proposition.jpg", caption: "Step 1, Request: how value is created during a workshop" },
+    { type: "image", src: "assets/workshops/dfss-billboard-qualify-and-design.jpg", caption: "Steps 2 and 3: qualify the stakeholders, then design the workshop" },
+    { type: "image", src: "assets/workshops/dfss-billboard-design-and-prototype.jpg", caption: "Steps 3 and 4: design the workshop, then prototype and test the offer" },
+    { type: "image", src: "assets/workshops/dfss-billboard-archive-and-sharing.jpg", caption: "Step 7, Archive: share with colleagues what you learned" }
   ]
 };
