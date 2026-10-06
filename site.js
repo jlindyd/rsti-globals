@@ -269,7 +269,7 @@
   document.addEventListener('click', function (e) {
     var el = e.target.closest ? e.target : e.target.parentElement;
     var t = el.closest('[data-dialog]');
-    if (t) { open(document.getElementById(t.getAttribute('data-dialog'))); return; }
+    if (t) { var cur = t.closest('dialog'); if (cur) close(cur); open(document.getElementById(t.getAttribute('data-dialog'))); return; }
     var c = el.closest('[data-dialog-close]');
     if (c) { close(c.closest('dialog')); return; }
     var link = el.closest('dialog a[href]');
