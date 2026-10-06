@@ -959,3 +959,14 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .route-card .program-open { text-align: left; }
 .route-card:hover .program-open { text-decoration: underline; text-decoration-color: var(--rsti-gold); text-underline-offset: .2em; }
 .route-card:has(.program-open:focus-visible) { outline: 2px solid var(--rsti-gold); outline-offset: 4px; }
+
+/* Logo badge in the menu (the logo's text is black, so it sits on a light plate) */
+.site-nav__mark { display: inline-flex; align-items: center; background: #faf8f4; border-radius: 8px; padding: 3px 10px; }
+.site-nav__mark img { display: block; height: 34px; width: auto; }
+
+/* Clickable timeline tags */
+button.day-plan__who { cursor: pointer; transition: background 160ms, transform 160ms; }
+button.day-plan__who--opex:hover { background: #e2b667; border-color: #e2b667; transform: translateY(-1px); }
+.day-plan__who--pair button { background: none; border: 0; padding: 0; margin: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; cursor: pointer; text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--sc-ink) 40%, transparent); text-underline-offset: .2em; }
+.day-plan__who--pair button:hover, .day-plan__who--pair button:focus-visible { color: var(--rsti-gold); text-decoration-color: var(--rsti-gold); }
+button.day-plan__who--opex:focus-visible { outline: 2px solid #f4eee3; outline-offset: 2px; }
