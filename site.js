@@ -260,3 +260,24 @@
   });
   if (location.hash.length > 1) window.addEventListener('load', function () { go(location.hash.slice(1), false); });
 })();
+
+/* Workshop example popups: <button data-dialog="id"> opens <dialog id>. */
+(function () {
+  var root = document.documentElement;
+  function open(d) { if (d && !d.open) { d.showModal(); root.classList.add('has-dialog'); } }
+  function close(d) { if (d && d.open) d.close(); root.classList.remove('has-dialog'); }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest ? e.target : e.target.parentElement;
+    var t = el.closest('[data-dialog]');
+    if (t) { open(document.getElementById(t.getAttribute('data-dialog'))); return; }
+    var c = el.closest('[data-dialog-close]');
+    if (c) { close(c.closest('dialog')); return; }
+    var link = el.closest('dialog a[href]');
+    if (link) { close(link.closest('dialog')); return; }
+    if (el.tagName === 'DIALOG') close(el);
+  }, true);
+  Array.prototype.forEach.call(document.querySelectorAll('dialog'), function (d) {
+    d.addEventListener('close', function () { root.classList.remove('has-dialog'); });
+    d.addEventListener('cancel', function () { root.classList.remove('has-dialog'); });
+  });
+})();
