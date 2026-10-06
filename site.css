@@ -944,3 +944,7 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .wd-thumbs button.has-img { width: 4.2rem; height: 3rem; background-size: cover; background-position: center; padding: 0; }
 .wd-stage.is-photo { aspect-ratio: auto; height: min(66vh, 640px); }
 .wd-stage.is-photo img { object-fit: contain; }
+
+/* Thin page footer */
+.site-footer { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1.5rem; padding: .7rem clamp(1.25rem, 4vw, 2.5rem); background: #0b182b; color: #8fa0b8; font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; border-top: 1px solid rgba(244,238,227,.1); }
+@media (max-width: 760px) { .site-footer { justify-content: center; text-align: center; } }
