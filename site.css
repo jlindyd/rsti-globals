@@ -377,27 +377,26 @@ body { background: var(--rsti-navy); }
 @media (max-width: 1100px) { .programs-grid { grid-template-columns: 1fr 1fr; } .program--lead { grid-column: 1 / -1; } }
 @media (max-width: 860px) { .programs-grid { grid-template-columns: 1fr; gap: var(--sc-8); } .program--lead { grid-column: auto; } }
 
-/* ------------------------------------------------------------ mission -- */
-.mission-h2 { max-width: 20ch; margin-bottom: var(--sc-9); }
-.principles-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sc-9); align-items: start; }
-.lean-robust-feature {
-  padding: var(--sc-7);
-  border: 1px solid var(--sc-hairline); border-radius: var(--sc-r-md);
-  background: color-mix(in oklab, var(--sc-canvas) 94%, var(--rsti-gold) 6%);
-}
-.lean-robust-feature h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-xl); margin: 0 0 var(--sc-4); }
-.lean-robust-feature .sc-body { margin-bottom: var(--sc-5); color: var(--sc-ink-soft); }
-.lean-robust-feature .sc-body:last-child { margin-bottom: 0; }
-.lean-robust-quote { font-family: var(--sc-font-display); font-style: italic; font-size: var(--sc-t-lg); color: var(--rsti-gold); margin: 0 0 var(--sc-5); }
-.principle-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--sc-hairline); }
-@media (max-width: 900px) { .principles-split { grid-template-columns: 1fr; gap: var(--sc-8); } }
-.principle-list li {
-  display: grid; grid-template-columns: 4rem 1fr; gap: var(--sc-6);
-  padding-block: var(--sc-6); border-bottom: 1px solid var(--sc-hairline);
-}
-.principle-num { font-family: var(--sc-font-mono); color: var(--rsti-gold); font-size: var(--sc-t-lg); }
-.principle-list h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-xl); margin: 0 0 var(--sc-2); letter-spacing: var(--sc-track-snug); }
+/* ---------------------------------------------------------- principles -- */
+.principles-h2 { max-width: 20ch; margin-bottom: var(--sc-5); }
+.principles-lede { max-width: 90ch; font-size: var(--sc-t-base); line-height: 1.65; color: var(--sc-ink-soft); margin-bottom: var(--sc-8); }
+.principle-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sc-6) var(--sc-7); margin-bottom: var(--sc-8); }
+.principle-card { border-top: 1px solid var(--sc-hairline); padding-top: var(--sc-4); }
+.principle-num { font-family: var(--sc-font-mono); color: var(--rsti-gold); font-size: var(--sc-t-sm); letter-spacing: var(--sc-track-wide); }
+.principle-card h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-lg); margin: var(--sc-2) 0 var(--sc-3); letter-spacing: var(--sc-track-snug); }
+.principle-q { font-weight: 600; font-size: var(--sc-t-sm); margin: 0 0 var(--sc-2); }
+.principle-a { font-size: var(--sc-t-sm); color: var(--sc-ink-soft); line-height: 1.6; margin: 0; }
+.principles-foot { display: grid; grid-template-columns: 1.7fr 1fr; gap: var(--sc-8); align-items: center; }
+.principle-example { padding: var(--sc-5) var(--sc-6); border: 1px solid var(--sc-hairline); border-radius: var(--sc-r-md); background: color-mix(in oklab, var(--sc-canvas) 94%, var(--rsti-gold) 6%); }
+.principle-example .sc-label { color: var(--rsti-gold-deep); margin-bottom: var(--sc-3); }
+.principle-example .sc-body { font-size: var(--sc-t-sm); line-height: 1.65; color: var(--sc-ink-soft); margin: 0; }
+.principles-close { font-family: var(--sc-font-display); font-style: italic; font-size: var(--sc-t-xl); line-height: 1.3; margin: 0; }
+@media (max-width: 980px) { .principle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .principles-foot { grid-template-columns: 1fr; gap: var(--sc-6); } }
+@media (max-width: 640px) { .principle-grid { grid-template-columns: 1fr; } }
 
+/* Next-section button at the bottom of each chapter. */
+.next-section { margin: var(--sc-8) 0 0; }
+.framework-actions { display: flex; flex-wrap: wrap; gap: var(--sc-3); }
 /* --------------------------------------------------------------- stats -- */
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sc-7); }
 .stat-num { color: var(--rsti-gold-deep); }
@@ -814,6 +813,5 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 @media (max-width: 860px) { .event-card { grid-template-columns: 1fr; gap: var(--sc-6); } .hero-event { margin-left: 0; } }
 
 /* Gold reads too faint on light chapters; use the deeper gold there. */
-.home-page .chapter--light .lean-robust-quote,
 .home-page .chapter--light .principle-num,
 .home-page .chapter--light .chapter-mark { color: var(--rsti-gold-deep); }
