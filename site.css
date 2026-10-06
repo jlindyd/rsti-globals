@@ -984,12 +984,14 @@ button.day-plan__who--opex:focus-visible { outline: 2px solid #f4eee3; outline-o
 /* Next-section buttons: centered, one style everywhere, with a visible down arrow */
 .home-page main > .chapter:not(#hero) { flex-direction: column; justify-content: center; align-items: stretch; }
 .next-section { display: flex; justify-content: center; margin: var(--sc-7) 0 0; }
-.next-section .link-cta { padding: .9rem 1.8rem; gap: .8rem; font-size: var(--sc-t-base); box-shadow: 0 6px 18px rgba(15,31,56,.22); }
-.next-section .link-cta span, .hero-ctas .workshop-button span { display: inline-block; font-size: 1.35em; line-height: 1; }
-.next-section .link-cta span, .hero-ctas .workshop-button span { animation: next-bob 1.8s ease-in-out infinite; }
-.next-section .link-cta:hover span { transform: none; }
-@keyframes next-bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(4px); } }
-@media (prefers-reduced-motion: reduce) { .next-section .link-cta span, .hero-ctas .workshop-button span { animation: none; } }.home-page #framework .framework-stage { padding-bottom: clamp(.5rem, 1.5vh, 1rem); }
 .home-page #framework .next-section { margin-top: 0; padding-bottom: clamp(2.5rem, 6vh, 4.5rem); }
 .home-page #framework .framework-stage { padding-top: 4.4rem; }
 .home-page #framework .next-section { padding-bottom: clamp(1.5rem, 3.5vh, 2.5rem); }
+
+/* Next-section arrow: round, static, centered */
+.next-arrow { display: inline-grid; place-items: center; width: 3.4rem; height: 3.4rem; border-radius: 50%; background: #5b6472; border: 1px solid #5b6472; box-shadow: 0 6px 18px rgba(15,31,56,.22); transition: background 160ms, border-color 160ms, transform 160ms; }
+.next-arrow svg { width: 1.7rem; height: 1.7rem; fill: none; stroke: #fff; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; transition: stroke 160ms; }
+.next-arrow:hover, .next-arrow:focus-visible { background: var(--rsti-gold); border-color: var(--rsti-gold); transform: translateY(2px); }
+.next-arrow:hover svg, .next-arrow:focus-visible svg { stroke: #0b182b; }
+.next-arrow:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.hero-ctas .workshop-button span { animation: none; }.home-page #framework .framework-stage { padding-bottom: clamp(.5rem, 1.5vh, 1rem); }
