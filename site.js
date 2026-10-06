@@ -118,7 +118,7 @@
       var dot = document.createElement("a");
       dot.className = "trace-rail__dot";
       dot.href = "#" + ch.id;
-      var label = (ch.getAttribute("data-chapter") || "") + " — " + (ch.getAttribute("data-chapter-title") || "");
+      var label = ch.getAttribute("data-chapter-title") || "";
       dot.setAttribute("aria-label", label);
       var tip = document.createElement("span");
       tip.className = "trace-rail__tip";
