@@ -946,3 +946,16 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 /* Thin page footer */
 .site-footer { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1.5rem; padding: .7rem clamp(1.25rem, 4vw, 2.5rem); background: #0b182b; color: #8fa0b8; font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; border-top: 1px solid rgba(244,238,227,.1); }
 @media (max-width: 760px) { .site-footer { justify-content: center; text-align: center; } }
+
+/* Pathway route cards open their workshop popup */
+.route-card { position: relative; cursor: pointer; padding-right: 4.6rem !important; transition: transform 200ms var(--sc-ease-out), border-color 160ms, background 160ms; }
+.route-card:hover { transform: translateY(-3px); border-color: var(--rsti-gold); background: color-mix(in oklab, var(--sc-ink) 5%, transparent); }
+.route-card .program-play { top: var(--sc-4); right: var(--sc-4); border-color: var(--rsti-gold); }
+.route-card .program-play svg { fill: var(--rsti-gold); }
+.route-card .program-play::after { background: #f4eee3; color: #0b182b; }
+.route-card:hover .program-play, .route-card:has(.program-open:focus-visible) .program-play { background: var(--rsti-gold); transform: scale(1.06); }
+.route-card:hover .program-play svg, .route-card:has(.program-open:focus-visible) .program-play svg { fill: #0b182b; }
+.route-card:hover .program-play::after, .route-card:has(.program-open:focus-visible) .program-play::after { opacity: 1; }
+.route-card .program-open { text-align: left; }
+.route-card:hover .program-open { text-decoration: underline; text-decoration-color: var(--rsti-gold); text-underline-offset: .2em; }
+.route-card:has(.program-open:focus-visible) { outline: 2px solid var(--rsti-gold); outline-offset: 4px; }
