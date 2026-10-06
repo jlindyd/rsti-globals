@@ -812,3 +812,8 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .event-card__body h2 { max-width: 28ch; margin-bottom: var(--sc-5); }
 .event-card__body .sc-body { max-width: 60ch; margin-bottom: var(--sc-6); color: var(--sc-ink-soft); }
 @media (max-width: 860px) { .event-card { grid-template-columns: 1fr; gap: var(--sc-6); } .hero-event { margin-left: 0; } }
+
+/* Gold reads too faint on light chapters; use the deeper gold there. */
+.home-page .chapter--light .lean-robust-quote,
+.home-page .chapter--light .principle-num,
+.home-page .chapter--light .chapter-mark { color: var(--rsti-gold-deep); }
