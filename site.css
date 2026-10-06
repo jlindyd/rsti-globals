@@ -867,3 +867,7 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .about-methods li:first-child { border-top: 1px solid var(--sc-hairline); }
 .about-methods li span { display: block; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); margin-top: .15rem; }
 @media (max-width: 1100px) { .about-grid { grid-template-columns: 1fr; gap: var(--sc-6); } }
+
+/* Upcoming on a light chapter: deeper gold for contrast. */
+.home-page .chapter--light .event-card__date,
+.home-page .chapter--light .event-card__body .sc-label { color: var(--rsti-gold-deep); }
