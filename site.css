@@ -276,13 +276,6 @@ body { background: var(--rsti-navy); }
   border: 1px solid rgba(200, 150, 62, 0.3);
   box-shadow: 0 12px 34px rgba(3, 7, 16, 0.45), inset 0 1px 0 rgba(244, 238, 227, 0.07);
 }
-.trace-rail__label {
-  flex-shrink: 0; margin-bottom: 1rem;
-  writing-mode: vertical-rl;
-  font-family: var(--sc-font-mono); font-size: 0.62rem; letter-spacing: 0.26em;
-  text-transform: uppercase; color: var(--rsti-gold); opacity: 0.85;
-  pointer-events: none;
-}
 .trace-rail__track {
   position: relative; flex: 1; width: 2px; border-radius: 2px;
   background: rgba(244, 238, 227, 0.16);
