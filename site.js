@@ -313,7 +313,7 @@
     }
     items.forEach(function (it, i) {
       var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Show item ' + (i + 1));
-      b.textContent = it.type === 'video' || it.type === 'embed' ? '\u25B6' : String(i + 1);
+      if (it.type === 'image') { b.className = 'has-img'; b.style.backgroundImage = 'url(' + it.src + ')'; } else { b.textContent = '\u25B6'; }
       b.addEventListener('click', function () { show(i); }); strip.appendChild(b);
     });
     g.appendChild(stage); g.appendChild(cap); if (items.length > 1) g.appendChild(strip);

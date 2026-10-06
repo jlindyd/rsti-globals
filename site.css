@@ -940,4 +940,5 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .program-play::after { content: "See it in action"; position: absolute; right: calc(100% + .6rem); top: 50%; transform: translateY(-50%); white-space: nowrap; padding: .3em .7em; border-radius: 999px; background: #0f1f38; color: #f4eee3; font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; opacity: 0; pointer-events: none; transition: opacity 160ms; }
 .program-card:hover .program-play, .program-card:has(.program-open:focus-visible) .program-play { background: var(--rsti-gold); border-color: var(--rsti-gold); transform: scale(1.06); }
 .program-card:hover .program-play svg, .program-card:has(.program-open:focus-visible) .program-play svg { fill: #0b182b; }
-.program-card:hover .program-play::after, .program-card:has(.program-open:focus-visible) .program-play::after { opacity: 1; }
+.program-card:hover .program-play::after, .program-card:has(.program-open:focus-visible) .program-play::after { opacity: 1; }.wd-steps em { font-style: normal; font-family: var(--sc-font-mono); font-size: var(--sc-t-xs); letter-spacing: .06em; text-transform: uppercase; color: var(--rsti-gold); margin-left: .5rem; }
+.wd-thumbs button.has-img { width: 4.2rem; height: 3rem; background-size: cover; background-position: center; padding: 0; }
