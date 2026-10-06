@@ -999,3 +999,6 @@ button.day-plan__who--opex:focus-visible { outline: 2px solid #f4eee3; outline-o
 /* Circled arrow inside a button (matches the round next-section buttons) */
 .btn-arrow { display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; border: 2px solid currentColor; flex-shrink: 0; }
 .btn-arrow svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Same faint square grid on the Book section's blue gradient */
+.home-page .book-feature.chapter--dark { background-image: linear-gradient(#ffffff03 1px, transparent 1px), linear-gradient(90deg, #ffffff03 1px, transparent 1px), linear-gradient(120deg, #091423, #142a46); background-size: 72px 72px, 72px 72px, auto; }
