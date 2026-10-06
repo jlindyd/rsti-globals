@@ -372,8 +372,6 @@ body { background: var(--rsti-navy); }
 @media (max-width: 640px) { .principle-grid { grid-template-columns: 1fr; } }
 
 /* Next-section button at the bottom of each chapter. */
-.next-section { margin: var(--sc-8) 0 0; }
-.framework-actions { display: flex; flex-wrap: wrap; gap: var(--sc-3); }
 /* --------------------------------------------------------------- stats -- */
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sc-7); }
 .stat-num { color: var(--rsti-gold-deep); }
@@ -809,7 +807,6 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .program-card h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-lg); line-height: 1.2; min-height: 2.4em; margin: 0 0 var(--sc-3); letter-spacing: var(--sc-track-snug); }
 .program-k { font-family: var(--sc-font-mono); font-size: var(--sc-t-xs); letter-spacing: var(--sc-track-wide); text-transform: uppercase; color: var(--rsti-gold-deep); margin: var(--sc-4) 0 var(--sc-1); }
 .program-card p:not(.program-k) { font-size: var(--sc-t-sm); line-height: 1.6; margin: 0; }
-.program-actions { display: flex; flex-wrap: wrap; gap: var(--sc-3); }
 @media (max-width: 980px) { .program-grid { grid-template-columns: 1fr; gap: var(--sc-6); } }
 /* Pathway: 90-day plan */
 .pathway-h2 { max-width: 24ch; font-size: var(--sc-t-2xl); margin-bottom: var(--sc-4); }
@@ -960,9 +957,6 @@ svg.sc-in .ng-arc:nth-child(6) { animation-delay: .4s; }
 .route-card:hover .program-open { text-decoration: underline; text-decoration-color: var(--rsti-gold); text-underline-offset: .2em; }
 .route-card:has(.program-open:focus-visible) { outline: 2px solid var(--rsti-gold); outline-offset: 4px; }
 
-/* Logo badge in the menu (the logo's text is black, so it sits on a light plate) */
-.site-nav__mark { display: inline-flex; align-items: center; background: #faf8f4; border-radius: 10px; padding: 4px 12px; }
-.site-nav__mark img { display: block; height: 38px; width: auto; }
 
 /* Clickable timeline tags */
 button.day-plan__who { cursor: pointer; transition: background 160ms, transform 160ms; }
@@ -970,3 +964,32 @@ button.day-plan__who--opex:hover { background: #e2b667; border-color: #e2b667; t
 .day-plan__who--pair button { background: none; border: 0; padding: 0; margin: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; cursor: pointer; text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--sc-ink) 40%, transparent); text-underline-offset: .2em; }
 .day-plan__who--pair button:hover, .day-plan__who--pair button:focus-visible { color: var(--rsti-gold); text-decoration-color: var(--rsti-gold); }
 button.day-plan__who--opex:focus-visible { outline: 2px solid #f4eee3; outline-offset: 2px; }
+
+
+/* Menu bar: light cool gray so the logo and its navy lettering stand out (not white) */
+.site-nav { background: linear-gradient(180deg, #dcdfe4 0%, #c9cdd4 100%); border-bottom: 1px solid rgba(20,33,58,.22); box-shadow: 0 6px 20px rgba(5,12,24,.28); backdrop-filter: none; padding-block: .55rem; }
+.site-nav__mark { display: inline-flex; align-items: center; background: none; padding: 0; border-radius: 0; }
+.site-nav__mark img { display: block; height: 46px; width: auto; }
+.site-nav__links a { color: rgba(20,33,58,.78); }
+.site-nav__links a:hover, .site-nav__links a.is-current { color: #14213a; border-color: var(--rsti-gold-deep); }
+.site-nav__chapter { color: rgba(20,33,58,.55); }
+.site-nav__chapter .folio__num { color: var(--rsti-gold-deep); }
+.site-nav__cta { background: #14213a; color: #f4eee3; }
+.site-nav__cta:hover { background: #1d3358; }
+.site-nav__toggle span { background: #14213a; }
+@media (max-width: 1400px) { .site-nav__links { border-top-color: rgba(20,33,58,.18); } }@media (max-width: 1400px) { .site-nav__links { flex: 0 0 100%; } }
+@media (min-width: 981px) and (max-width: 1400px) { .site-nav__links { padding-left: 3.4rem; } }
+
+
+/* Next-section buttons: centered, one style everywhere, with a visible down arrow */
+.home-page main > .chapter:not(#hero) { flex-direction: column; justify-content: center; align-items: stretch; }
+.next-section { display: flex; justify-content: center; margin: var(--sc-7) 0 0; }
+.next-section .link-cta { padding: .9rem 1.8rem; gap: .8rem; font-size: var(--sc-t-base); box-shadow: 0 6px 18px rgba(15,31,56,.22); }
+.next-section .link-cta span, .hero-ctas .workshop-button span { display: inline-block; font-size: 1.35em; line-height: 1; }
+.next-section .link-cta span, .hero-ctas .workshop-button span { animation: next-bob 1.8s ease-in-out infinite; }
+.next-section .link-cta:hover span { transform: none; }
+@keyframes next-bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(4px); } }
+@media (prefers-reduced-motion: reduce) { .next-section .link-cta span, .hero-ctas .workshop-button span { animation: none; } }.home-page #framework .framework-stage { padding-bottom: clamp(.5rem, 1.5vh, 1rem); }
+.home-page #framework .next-section { margin-top: 0; padding-bottom: clamp(2.5rem, 6vh, 4.5rem); }
+.home-page #framework .framework-stage { padding-top: 4.4rem; }
+.home-page #framework .next-section { padding-bottom: clamp(1.5rem, 3.5vh, 2.5rem); }
